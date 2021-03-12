@@ -141,7 +141,7 @@ collections:
         widget: "markdown"
   - name: "news"
     label: "news"
-    folder: "src/pages/posts"
+    folder: "src/pages/news"
     extension: "mdx"
     format: "frontmatter"
     create: true
