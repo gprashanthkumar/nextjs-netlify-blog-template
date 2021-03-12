@@ -5,7 +5,7 @@ import OpenGraphMeta from "../../../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../../../components/meta/TwitterCardMeta";
 import TagPostList from "../../../components/TagPostList";
 import config from "../../../lib/config";
-import { countPosts, listPostContent, PostContent } from "../../../lib/posts";
+import { countPosts, listPostContent, PostContent } from "../../../lib/news";
 import { getTag, listTags, TagContent } from "../../../lib/tags";
 import Head from "next/head";
 
@@ -64,11 +64,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
     return Array.from(Array(pages).keys()).map((page) =>
       page === 0
         ? {
-            params: { slug: [tag.slug] },
-          }
+          params: { slug: [tag.slug] },
+        }
         : {
-            params: { slug: [tag.slug, (page + 1).toString()] },
-          }
+          params: { slug: [tag.slug, (page + 1).toString()] },
+        }
     );
   });
   return {

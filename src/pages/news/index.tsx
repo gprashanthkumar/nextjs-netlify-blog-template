@@ -5,7 +5,7 @@ import OpenGraphMeta from "../../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../../components/meta/TwitterCardMeta";
 import PostList from "../../components/PostList";
 import config from "../../lib/config";
-import { countPosts, listPostContent, PostContent } from "../../lib/posts";
+import { countPosts, listPostContent, PostContent } from "../../lib/news";
 import { listTags, TagContent } from "../../lib/tags";
 import Head from "next/head";
 
@@ -18,8 +18,8 @@ type Props = {
   };
 };
 export default function Index({ posts, tags, pagination }: Props) {
-  const url = "/posts";
-  const title = "All posts";
+  const url = "/news";
+  const title = "All news";
   return (
     <Layout>
       <BasicMeta url={url} title={title} />
