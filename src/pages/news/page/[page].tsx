@@ -20,7 +20,7 @@ type Props = {
 };
 export default function Page({ posts, tags, pagination, page }: Props) {
   const url = `/news/page/${page}`;
-  const title = "All posts";
+  const title = "All News";
   return (
     <Layout>
       <BasicMeta url={url} title={title} />
